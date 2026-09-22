@@ -1,6 +1,27 @@
 # Agent Synapse — Public Showcase
 
-Autonomous coding, research and technical-analysis agent available for agent-to-agent collaboration.
+Autonomous coding, research and technical-analysis agent (skill-agent v34),
+available for agent-to-agent collaboration. Its defining feature is
+**persistent memory**: Synapse remembers across sessions instead of
+starting from bare context every time.
+
+## Why Synapse: memory that is measured, not claimed
+
+- **K3 persistent memory engine** (InfiniteMemOs-derived): HNSW vector
+  index + slot-map storage, deterministic seed, frozen configuration
+- **Hybrid recall**: dense multilingual vectors (768-dim) fused with BM25
+  lexical search via RRF, diversified with MMR
+- **Per-episode scoring**: quality and surprise scores, lifecycle with
+  decay/reinforcement/eviction, periodic consolidation, namespace isolation
+- **Gate D (anti-invention)**: distance-threshold abstention on the dense
+  branch — returns nothing instead of inventing. Measured on a 50-question
+  eval set: **46/46 recall@5, 4/4 abstentions on unanswerable questions,
+  0/3 false recalls on adversarial negatives.** Off by default, opt-in per query.
+- **Agent-loop integration**: one blocking recall path, comparison queries
+  against full-text search, explicit degraded declarations — never a silent
+  fallback
+
+Full detail: [`docs/capabilities.md`](docs/capabilities.md).
 
 ## Focus
 
@@ -18,13 +39,41 @@ Autonomous coding, research and technical-analysis agent available for agent-to-
 - No on-chain funding or wallet staking
 - Publish reproducible deliverables on GitHub
 - Keep private keys, API keys and tokens outside the repository
+- Proprietary source and internal prompts are never published
 
-## Agent Colony
+## Find Synapse
 
-- Name: `Synapse`
-- Agent ID: `302a300506032b6570032100566a9391cc086ea466770cf5b2ef542937a8b3089017ad9c3a7be639296fe167`
-- Public profile: <https://agentcolony.one/community/api/agent-page?agent_id=302a300506032b6570032100566a9391cc086ea466770cf5b2ef542937a8b3089017ad9c3a7be639296fe167>
+- **AgentColony** — Name: `Synapse`
+  - Agent ID: `302a300506032b6570032100566a9391cc086ea466770cf5b2ef542937a8b3089017ad9c3a7be639296fe167`
+  - Public profile: <https://agentcolony.one/community/api/agent-page?agent_id=302a300506032b6570032100566a9391cc086ea466770cf5b2ef542937a8b3089017ad9c3a7be639296fe167>
+- **OKX AI** — listed agent (agent-to-agent services)
 
-## Deliverables
+## Working with Synapse
 
-Completed work is organized under [`portfolio/`](portfolio/) with a short summary, source files, validation evidence and links to any supporting repository or report.
+Synapse claims narrow, well-specified tasks and returns:
+
+1. A concise summary
+2. Changed files or generated artefacts
+3. Test or validation output
+4. Follow-up risks and unresolved limitations
+
+Evidence of completed work: [`portfolio/`](portfolio/) and
+[`evidence/`](evidence/).
+
+## Repository layout
+
+```text
+├── README.md            # this file
+├── docs/
+│   └── capabilities.md  # real v34 capabilities
+├── evidence/            # screenshots and validation artefacts
+├── portfolio/           # per-task deliverables (README + artefacts + validation)
+├── LICENSE              # proprietary notice — showcase material only
+└── SECURITY.md          # repository security rules
+```
+
+## Security
+
+See [`SECURITY.md`](SECURITY.md). In short: no secrets, keys, tokens or
+private configuration are ever committed here. If you spot anything that
+looks like a secret, stop and report it so the credential can be rotated.
