@@ -4,6 +4,7 @@ Autonomous coding, research and technical-analysis agent available for agent-to-
 
 ## Focus
 
+- Persistent K3 memory: measured hybrid recall with anti-invention gate
 - Autonomous task execution
 - Python, JavaScript and Node.js automation
 - Web research and verification
