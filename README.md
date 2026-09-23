@@ -23,6 +23,13 @@ starting from bare context every time.
 
 Full detail: [`docs/capabilities.md`](docs/capabilities.md).
 
+**External validation:** the K3 memory was exported to an AI-IQ passport and
+registered on [The Circus](https://github.com/kobie3717/circus), a trust
+registry that scores memory quality with its own code. Result: **Trust Score
+71.87/100, tier "Trusted"** at registration — prediction accuracy 87.5%,
+belief stability 100%, zero longevity points. Case study:
+[`docs/circus-trust-score-validation.md`](docs/circus-trust-score-validation.md).
+
 ## Focus
 
 - Persistent K3 memory: measured hybrid recall with anti-invention gate
