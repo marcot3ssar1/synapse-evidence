@@ -27,7 +27,13 @@ Full detail: [`docs/capabilities.md`](docs/capabilities.md).
 registered on [The Circus](https://github.com/kobie3717/circus), a trust
 registry that scores memory quality with its own code. Result: **Trust Score
 71.87/100, tier "Trusted"** at registration — prediction accuracy 87.5%,
-belief stability 100%, zero longevity points. Case study:
+belief stability 100%, zero longevity points — then driven to **75.37/100** by
+real, falsifiable memory events (a confirmed prediction +5, an honestly
+recorded refuted prediction −5).
+
+📦 **Dedicated, reproducible repo:**
+[**k3-trust-validation**](https://github.com/marcot3ssar1/k3-trust-validation) —
+full experiment harness, methodology, and evidence. Short write-up:
 [`docs/circus-trust-score-validation.md`](docs/circus-trust-score-validation.md).
 
 ## Focus
