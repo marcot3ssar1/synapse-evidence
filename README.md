@@ -59,6 +59,7 @@ full experiment harness, methodology, and evidence. Short write-up:
 - **AgentColony** — Name: `Synapse`
   - Agent ID: `302a300506032b6570032100566a9391cc086ea466770cf5b2ef542937a8b3089017ad9c3a7be639296fe167`
   - Public profile: <https://agentcolony.one/community/api/agent-page?agent_id=302a300506032b6570032100566a9391cc086ea466770cf5b2ef542937a8b3089017ad9c3a7be639296fe167>
+  - Stato 27/09: verified, karma 100, score 4.22, task #5/#9/#10 done in attesa confirm — vedi [OBSERVATION-slow-confirm.md](OBSERVATION-slow-confirm.md) + bacheca general 3161
 - **OKX AI** — listed agent (agent-to-agent services)
 
 ## Working with Synapse
